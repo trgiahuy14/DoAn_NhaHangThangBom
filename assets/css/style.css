@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:ital,wght@1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: none; */
+}
+
+/* SETUP */
+:root{
+    --main_color:#191F3A;
+--yelow:#EAA023;
+--smooth:all .3s ease-in;
+--bg--color:#0C1023;
+--main-font:'Dancing Script';
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.section_padding{
+    padding: 20px 0;
+}
+
+.justify_content{
+    justify-content: space-between;
+}
+
+
+/* Phần đầu */
+#header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #000;
+    height: 80px;
+}
+
+#nav{
+    text-align: center;
+}
+#nav ul{
+    text-align: center;
+}
+#nav li{
+    display: inline-block;
+    
+}
+
+#nav li a{
+    color: #fff;
+    line-height: 80px;
+    padding: 0 45px;
+    display: block;
+}
+
+#nav li:hover a{
+    background-color: #ccc;
+    color: #000;
+    box-shadow: var(--yelow)  0 3px 0;
+}
+
+
+#header .logo{
+    position: absolute;
+    width: 80px;
+    float: left;
+    padding: 5px ;
+    line-height: 80px;
+}
+
+/* Kết thúc phần đầu */
+
+/* Bắt đầu phần slider */
+#slider {
+    margin-top: 80px;
+    padding-top: 50%;
+
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(/assets/img/slide/hinhnen.jpg) bottom center / cover no-repeat;
+
+    position: relative;
+}
+
+.slider-content{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    -webkit-text-stroke: 0.7px #000;
+}
+
+#slider  .slider-content-heading{
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-size: 70px;
+    font-style: italic;
+    font-family: 'Dancing Script';
+    color: var(--yelow);
+}
+
+#slider  .slider-content-description{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 25px;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.3px #000;
+}
+
+.btn{
+    background-color: transparent;
+    padding: 15px 30px;
+    border: 2px solid var(--yelow);
+    border-radius: 50px;
+    color: var(--yelow);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--smooth);
+    font-weight: 700;
+    margin-top: 40px;
+    min-width: 200px;
+    font-size: 20px;
+}
+    
+    
+
+.btn:hover {
+    background-color: rgba(0, 0,0, 0.4);
+}
+
+
+/* Phần about */
+
+#about{
+    background-color: var(--main_color);
+    /* min-height: 90vh; */
+   
+}
+.container{
+    margin: auto;
+    max-width: 1200px;
+    padding: 64px 32px ;
+}
+
+.row{
+    display: flex;
+    /* flex-wrap: wrap; */
+   
+}
+
+.about-item img{
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    
+}
+.about-item{
+    width: calc(100%/2);
+    padding: 15px;
+    float: left;
+    color: #fff;
+}
+
+.about-title{
+    width: 100%;
+    text-align: center;
+}
+
+.about-title h1{
+    font-size: 55px;
+    font-family: var(--main-font);
+    color: var(--yelow);
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+.about-item h2{
+    font-weight: 600;
+    font-size: 30px;
+  
+    line-height: 1.6;
+}
+
+.about-item h2 span{
+    font-family: var(--main-font);
+    color: var(--yelow);
+    -webkit-text-stroke: 0.7px #000;
+    font-size: 37px;
+}
+
+.about-item p{
+    margin-top: 30px;
+    line-height: 1.6;
+    font-size: 20px;
+}
+/* Kết thúc phần About */
+
+/* Phần menu */
+#menu{
+    background-color: var(--bg--color);
+}
+#menu input{
+    display: none;
+}
+
+#gallery-album{
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+#menu .tag{
+    font-size: 20px;
+    margin: 1.5em 0px;
+    padding: 5px 25px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background: #efefef;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+   
+}
+
+#menu .images img{
+    max-width: 300px;
+    width: 20%;
+    height: 300px;
+    transition:  .4s ease-in-out;
+    border-radius: 30px;
+}
+
+#menu .images img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+ #menuDacbiet:checked ~ .images > a > img:not([class*='menuDacbiet']),
+ #menuTiec:checked ~ .images > a > img:not([class*='menuTiec']),
+ #menuMeat:checked ~ .images > a >  img:not([class*='menuMeat']),
+ #menuFish:checked ~ .images > a > img:not([class*='menuFish']),
+ #khac:checked ~ .images > a > img:not([class*='khac'])
+ {
+   width: 0px;
+   height: 0px;
+}
+
+#menuDacbiet:checked ~ .tag1, 
+#menuTiec:checked ~ .tag2,
+#menuMeat:checked ~ .tag3,
+#menuFish:checked ~ .tag4,
+#khac:checked ~ .tag5
+{
+    background-color: var(--yelow);  
+    transition: var(--smooth);    
+    color: #fff;
+} 
+/* Kết thúc phần menu */
+
+/* Phần order ( đặt bàn ) */
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner-img.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background: url("card-img.jpg") center/cover no-repeat;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #fff;
+    height: 330px;
+}
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #9a9a9a;
+}
+form input[type = submit]{
+    color: #fff;
+    background: #f2745f;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    opacity: 0.9;
+}
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
