@@ -91,7 +91,7 @@ ul{
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url(../assets/img/slide/hinhnen.jpg) bottom center / cover no-repeat;
+    url("/assets/img/slide/hinhnen2.jpg") bottom center / cover no-repeat;
 
     position: relative;
 }
@@ -108,13 +108,15 @@ ul{
 }
 
 #slider  .slider-content-heading{
-    font-weight: 900;
+    font-weight: 600;
     font-size: 24px;
     letter-spacing: 3px;
     font-size: 70px;
-    font-style: italic;
+    /* font-style: italic; */
     font-family: 'Dancing Script';
     color: var(--yelow);
+    -webkit-text-stroke: 1.5px #000;
+
 }
 
 #slider  .slider-content-description{
@@ -122,7 +124,7 @@ ul{
     font-weight: 600;
     margin-top: 25px;
     line-height: 1.4;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     -webkit-text-stroke: 0.3px #000;
 }
 
@@ -300,7 +302,7 @@ ul{
     
 }
 .card-img{
-    background: url(/assets/img/order/order-picture.jpg)  bottom / cover no-repeat;
+    background: url("/assets/img/order/order-card-img.jpg")  center / cover no-repeat;
 }
 
 .card-content{
@@ -356,7 +358,7 @@ select:invalid {
 
 form input[type = submit]{
     color: #fff;
-    background: var(--maugo);
+    background: var(--yelow);
     
     padding: 12px 0;
     border-radius: 8px;
