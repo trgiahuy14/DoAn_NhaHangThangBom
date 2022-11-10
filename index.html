@@ -7,9 +7,11 @@
     <title>Nhà hàng hầm rượu Thằng Bờm</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="./assets/js/node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" />
-    <script src="./assets/js/node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/img/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
+    
     <div id="main">
 
          <!-- Phần header -->
@@ -17,11 +19,11 @@
             <div class="logo"><img src="./assets/img/logo.png" alt="logo" class="logo"><a href="#home"></a></div>
             <div id="nav">
                 <ul id="nav">
-                <li><a href="">TRANG CHỦ</a></li>
-                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#slider">TRANG CHỦ</a></li>
+                <li><a href="#about">GIỚI THIỆU</a></li>
                 <li><a href="#menu">MENU</a></li>
                 <li><a href="#order">ĐẶT BÀN</a></li>
-                <li><a href="">LIÊN HỆ </a></li>
+                <li><a href="#contact">LIÊN HỆ </a></li>
             </ul>
             </div>
          </div>
@@ -46,7 +48,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-title">
-                        <h1>About</h1>
+                        <h1>Về chúng tôi</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -115,8 +117,8 @@
 
                             <a href="./assets/img/menu/menuFish/12.JPG" data-lightbox="mygallery" data-title="Menu hải sản 1" ><img src="./assets/img/menu/menuFish/12.JPG"  class="menuFish"></a>
                             <a href="./assets/img/menu/menuFish/13.JPG" data-lightbox="mygallery" data-title="Menu hải sản 2"><img src="./assets/img/menu/menuFish/13.JPG"  class="menuFish"></a>
-                            <a href="./assets/img/menu/menuFish/15.JPG" data-lightbox="mygallery" data-title="Menu hải sản 3"><img src="./assets/img/menu/menuFish/15.JPG"  class="menuFish"></a>
-                            <a href="./assets/img/menu/menuFish/16.JPG" data-lightbox="mygallery" data-title="Menu hải sản 4"><img src="./assets/img/menu/menuFish/16.JPG"  class="menuFish"></a>
+                            <a href="./assets/img/menu/menuFish/16.JPG" data-lightbox="mygallery" data-title="Menu hải sản 3"><img src="./assets/img/menu/menuFish/16.JPG"  class="menuFish"></a>
+                            
                             
                            
 
@@ -133,51 +135,58 @@
         <!-- Kết thúc phần menu -->
         
         <!-- Phần order -->
-        <div id="order">
+        <div id="order" class="section_padding">
            
                 <section class = "banner">
-                    <h2>Dat ban</h2>
+                    <div class="about-title">
+                        <h1>Đặt bàn</h1>
+                    </div>
                     <div class = "card-container">
                         <div class = "card-img">
                             <!-- image here -->
                         </div>
-        
+                        
                         <div class = "card-content">
-                            <h3>Reservation</h3>
+                            
                             <form>
+
                                 <div class = "form-row">
-                                    <select name = "days">
-                                        <option value = "day-select">Select Day</option>
-                                        <option value = "sunday">Sunday</option>
-                                        <option value = "monday">Monday</option>
-                                        <option value = "tuesday">Tuesday</option>
-                                        <option value = "wednesday">Wednesday</option>
-                                        <option value = "thursday">Thursday</option>
-                                        <option value = "friday">Friday</option>
-                                        <option value = "saturday">Saturday</option>
-                                    </select>
-        
-                                    <select name = "hours">
-                                        <option value = "hour-select">Select Hour</option>
-                                        <option value = "10">10: 00</option>
-                                        <option value = "10">12: 00</option>
-                                        <option value = "10">14: 00</option>
-                                        <option value = "10">16: 00</option>
-                                        <option value = "10">18: 00</option>
-                                        <option value = "10">20: 00</option>
-                                        <option value = "10">22: 00</option>
+
+                                    <input type="datetime-local" placeholder="Chọn ngày">
+
+                                    <select name = "hours" required>
+                                        <option value = "">Chọn giờ</option>
+                                        <option value = "10">10:00</option>
+                                        <option value = "10">12:00</option>
+                                        <option value = "10">14:00</option>
+                                        <option value = "10">16:00</option>
+                                        <option value = "10">18:00</option>
+                                        <option value = "10">20:00</option>
+                                        
                                     </select>
                                 </div>
         
                                 <div class = "form-row">
-                                    <input type = "text" placeholder="Full Name">
-                                    <input type = "text" placeholder="Phone Number">
+                                    <input type = "text" placeholder="Họ và tên" required>
+                                    <input type = "number" placeholder="Số điện thoại" required>
                                 </div>
         
                                 <div class = "form-row">
-                                    <input type = "number" placeholder="How Many Persons?" min = "1">
-                                    <input type = "submit" value = "BOOK TABLE">
+                                    <input type = "email" placeholder="Email" >
+                                    <input type = "number" placeholder="Số lượng người" min = "1" required>
+                                    
                                 </div>
+
+                                <div class="form-row">
+                                    <textarea  name="" id="" cols="300" rows="2" placeholder="Ghi chú (nếu có)"></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <input type = "submit" value = "ĐẶT BÀN">
+                                </div>
+
+                                <p id="output"></p>
+                                
                             </form>
                         </div>
                     </div>
@@ -189,29 +198,56 @@
         </div>
                                 
                                 
-                                
-                                
-                                
-                                
-                                
-                                
+        <!-- Phần liên hệ -->
+        <div id="contact" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="about-title">
+                        <h1>LIÊN HỆ</h1>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="about-item">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15675.064451962726!2d106.6088027395508!3d10.829202600000025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f9f88b9211f%3A0x8b3788bae6617c77!2zTmjDoCBIw6BuZyBI4bqnbSBSxrDhu6N1IFRo4bqxbmcgQuG7nW0!5e0!3m2!1svi!2s!4v1668078078709!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
 
-
-      
-                           
-       
-
-
-
-
-
-        <div id="contact">
-            
+                    <div class="about-item">
+                        <p>NHÀ HÀNG THẰNG BỜM <br>
+                            <i class="ti-location-pin"></i> - 85 Nguyễn Văn Quá, Quận 12, TP.Hồ Chí Minh<br>
+                            
+                            <i class="ti-mobile"></i> - Điện thoại: 0902 905 919 <br>
+                            
+                            <i class="ti-email"></i> - hamruouthangbom@gmail.com <br>
+                              
+                            <i class="ti-timer"></i> - 09:00 - 23:00 tất cả các ngày ( kể cả ngày lễ )</p>
+                        <ul class="socialmedia">
+                            <li><a href="https://www.facebook.com/profile.php?id=100087332216216"><i class="ti-facebook"></i></a></li>
+                            <li><a href=""><i class="ti-instagram"></i></a></li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <!-- Kết thúc phần liên hệ -->
 
 
     </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+    config = {
+    
+    dateFormat: "d-m-Y",
+    minDate: "today",
+    disableMobile: "true"
+    }
+    flatpickr("input[type=datetime-local]", config);
+    
+    </script>
+
+    <!-- End scripts -->
 </body>
 </html>

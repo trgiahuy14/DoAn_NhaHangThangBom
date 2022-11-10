@@ -14,6 +14,7 @@
 --smooth:all .3s ease-in;
 --bg--color:#0C1023;
 --main-font:'Dancing Script';
+--maugo: #c27216;
 }
 
 
@@ -26,7 +27,7 @@ ul{
 }
 
 .section_padding{
-    padding: 20px 0;
+    padding: 80px 0;
 }
 
 .justify_content{
@@ -157,7 +158,7 @@ ul{
 .container{
     margin: auto;
     max-width: 1200px;
-    padding: 64px 32px ;
+    padding: 50px 32px ;
 }
 
 .row{
@@ -245,9 +246,9 @@ ul{
 
 #menu .images img{
     max-width: 300px;
-    width: 20%;
-    height: 300px;
-    transition:  .4s ease-in-out;
+    width: 30%;
+    height: 400px;
+    transition:  .3s ease-in-out;
     border-radius: 30px;
 }
 
@@ -279,69 +280,101 @@ ul{
 /* Kết thúc phần menu */
 
 /* Phần order ( đặt bàn ) */
+#order{
+    background-color: var(--main_color);
+}
 .banner{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner-img.jpg") center/cover no-repeat;
+    
+    padding: 64px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding-bottom: 20px;
+    
 }
 .card-container{
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: 420px 420px;
+    grid-template-columns: 600px 600px;
+    
 }
 .card-img{
-    background: url("card-img.jpg") center/cover no-repeat;
+    background: url(/assets/img/order/order-picture.jpg)  bottom / cover no-repeat;
 }
-.banner h2{
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-}
+
 .card-content{
     background: #fff;
-    height: 330px;
+    height: 500px;
+    margin: auto 0;
+    padding: 60px 0;
+    text-align: center;
 }
+
 .card-content h3{
     text-align: center;
     color: #000;
     padding: 25px 0 10px 0;
     font-size: 26px;
     font-weight: 500;
+    
 }
 .form-row{
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
+    
 }
-form select, form input{
-    display: block;
+
+
+form select, form input, form textarea{
+    
     width: 100%;
     margin: 15px 12px;
     padding: 5px;
-    font-size: 15px;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
     outline: none;
     border: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1.5px solid #ccc;
     font-weight: 300;
 }
-form input[type = text], form input[type = number], form input::placeholder, select{
-    color: #9a9a9a;
+
+form input::placeholder, option{
+    color:#9a9a9a ;
 }
+
+
+form input[type = text], form input[type = number],
+form textarea,select{
+    color: #000;
+}
+
+select:invalid {
+    color:#9a9a9a ;
+  }
+
 form input[type = submit]{
     color: #fff;
-    background: #f2745f;
+    background: var(--maugo);
+    
     padding: 12px 0;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
 }
-form input[type = submit]:hover{
-    opacity: 0.9;
+
+form input[type=datetime-local]:hover,form select:hover{
+    cursor: pointer;
 }
-@media(max-width: 992px){
+form input:hover, form textarea:hover, form select:hover{
+    border: 1.5px solid #ccc;
+}
+
+form input[type = submit]:hover{
+    opacity: 0.8;
+}
+
+/* @media(max-width: 992px){
     .card-container{
         grid-template-columns: 100%;
         width: 100vw;
@@ -349,4 +382,53 @@ form input[type = submit]:hover{
     .card-img{
         height: 330px;
     }
+} */
+
+/* Kết thúc phần order */
+
+/* Phần contact */
+#contact{
+    background-color: var(--bg--color);
+}
+
+#contact p {
+    line-height: 3.5;
+    text-transform: var(--smooth);
+}
+
+#contact i{
+    font-size: 25px;
+}
+
+.socialmedia li{
+    display: inline-block;
+}
+
+.socialmedia li a{
+    padding: 0 8px;
+}
+.socialmedia i[class="ti-facebook"]{
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #4267B2;
+}
+
+.socialmedia i[class="ti-instagram"]{
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.socialmedia i:hover{
+    opacity: 0.7;
 }
