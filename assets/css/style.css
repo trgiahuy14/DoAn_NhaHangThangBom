@@ -91,7 +91,7 @@ ul{
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url(/assets/img/slide/hinhnen.jpg) bottom center / cover no-repeat;
+    url(../assets/img/slide/hinhnen.jpg) bottom center / cover no-repeat;
 
     position: relative;
 }
@@ -300,7 +300,7 @@ ul{
     
 }
 .card-img{
-    background: url("/assets/img/order/order-picture.jpg")  bottom / cover no-repeat;
+    background: url(/assets/img/order/order-picture.jpg)  bottom / cover no-repeat;
 }
 
 .card-content{
