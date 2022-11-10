@@ -300,7 +300,7 @@ ul{
     
 }
 .card-img{
-    background: url("./assets/img/order/order-picture.jpg")  bottom / cover no-repeat;
+    background: url("/assets/img/order/order-picture.jpg")  bottom / cover no-repeat;
 }
 
 .card-content{
