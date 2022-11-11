@@ -67,7 +67,7 @@ ul{
 #nav li:hover a{
     background-color: #ccc;
     color: #000;
-    box-shadow: var(--yelow)  0 3px 0;
+    box-shadow: var(--yelow)  5px 7px 9px;
 }
 
 
@@ -91,7 +91,7 @@ ul{
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url("/assets/img/slide/hinhnen2.jpg") bottom center / cover no-repeat;
+    url('/assets/img/slide/hinhnen2.jpg') bottom center / cover no-repeat;
 
     position: relative;
 }
@@ -160,7 +160,7 @@ ul{
 .container{
     margin: auto;
     max-width: 1200px;
-    padding: 50px 32px ;
+    padding: 54px 32px ;
 }
 
 .row{
@@ -409,6 +409,8 @@ form input[type = submit]:hover{
 .socialmedia li a{
     padding: 0 8px;
 }
+
+
 .socialmedia i[class="ti-facebook"]{
     color: #fff;
     font-size: 20px;
@@ -429,6 +431,14 @@ form input[type = submit]:hover{
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.socialmedia i[class="ti-youtube"]{
+    border-radius: 50%;
+    color: #fff;
+    background-color: red;
+    padding: 5px;
+    border: 1px solid #fff;
 }
 
 .socialmedia i:hover{
