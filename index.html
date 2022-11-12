@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhà hàng hầm rượu Thằng Bờm</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="./assets/js/node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/img/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -148,37 +148,37 @@
                         
                         <div class = "card-content">
                             
-                            <form>
+                            <form method="POST" action="connect.php" >
 
                                 <div class = "form-row">
 
-                                    <input type="datetime-local" placeholder="Chọn ngày">
+                                    <input type="datetime-local" placeholder="Chọn ngày" name="chooseDate">
 
                                     <select name = "hours" required>
                                         <option value = "">Chọn giờ</option>
                                         <option value = "10">10:00</option>
-                                        <option value = "10">12:00</option>
-                                        <option value = "10">14:00</option>
-                                        <option value = "10">16:00</option>
-                                        <option value = "10">18:00</option>
-                                        <option value = "10">20:00</option>
+                                        <option value = "12">12:00</option>
+                                        <option value = "14">14:00</option>
+                                        <option value = "16">16:00</option>
+                                        <option value = "18">18:00</option>
+                                        <option value = "20">20:00</option>
                                         
                                     </select>
                                 </div>
         
                                 <div class = "form-row">
-                                    <input type = "text" placeholder="Họ và tên" required>
-                                    <input type = "number" placeholder="Số điện thoại" required>
+                                    <input type = "text" placeholder="Họ và tên" name="name" required >
+                                    <input type = "number" placeholder="Số điện thoại" name="phoneNumber" required >
                                 </div>
         
                                 <div class = "form-row">
-                                    <input type = "email" placeholder="Email" >
-                                    <input type = "number" placeholder="Số lượng người" min = "1" required>
+                                    <input type = "email" placeholder="Email" name="email">
+                                    <input type = "number" placeholder="Số lượng người" min = "1" name="people" required >
                                     
                                 </div>
 
                                 <div class="form-row">
-                                    <textarea  name="" id="" cols="300" rows="2" placeholder="Ghi chú (nếu có)"></textarea>
+                                    <textarea id="" cols="300" rows="2" placeholder="Ghi chú (nếu có)" name="note"></textarea>
                                 </div>
 
                                 <div class="form-row">
