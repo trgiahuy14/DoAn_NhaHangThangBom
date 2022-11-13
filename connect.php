@@ -18,10 +18,9 @@
       $stmt = $conn->prepare("insert into datban(chooseDate, hours, name, phoneNumber, email, people, note) values(?, ?, ?, ?, ?, ?, ?)");
       $stmt->bind_param("sssisis", $chooseDate, $hours, $name, $phoneNumber, $email, $people, $note);
       $execval = $stmt->execute();
-      echo $execval;
-      echo "Registration successfully...";
-      $stmt->close();
-      $conn->close();
+  
+     
+     
       }
       
   }

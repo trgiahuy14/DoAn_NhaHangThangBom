@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     /* outline: none; */
+    scroll-behavior: smooth;
 }
 
 /* SETUP */
@@ -84,7 +85,7 @@ ul{
 /* Bắt đầu phần slider */
 #slider {
     margin-top: 80px;
-    padding-top: 50%;
+    min-height: 100vh;
 
     background:
     linear-gradient(
@@ -133,17 +134,21 @@ ul{
     padding: 15px 30px;
     border: 2px solid var(--yelow);
     border-radius: 50px;
-    color: var(--yelow);
     font-weight: 500;
     cursor: pointer;
     transition: var(--smooth);
-    font-weight: 700;
+    
     margin-top: 40px;
     min-width: 200px;
     font-size: 20px;
 }
     
-    
+.btn a{
+    letter-spacing: 5px;
+    color: #fff;
+    font-weight: 500;
+    color: var(--yelow);
+}
 
 .btn:hover {
     background-color: rgba(0, 0,0, 0.4);
@@ -154,7 +159,7 @@ ul{
 
 #about{
     background-color: var(--main_color);
-    /* min-height: 90vh; */
+    min-height: 100vh;
    
 }
 .container{
@@ -319,8 +324,9 @@ ul{
     padding: 25px 0 10px 0;
     font-size: 26px;
     font-weight: 500;
-    
 }
+
+
 .form-row{
     display: flex;
     width: 95%;
@@ -356,13 +362,17 @@ select:invalid {
     color:#9a9a9a ;
   }
 
-form input[type = submit]{
+form #submit{
     color: #fff;
+    outline: none;
     background: var(--yelow);
-    
+    width: 100%;
     padding: 12px 0;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
+    font-size: 20px;
+    border: 0px solid #000;
+    font-weight: 600;
 }
 
 form input[type=datetime-local]:hover,form select:hover{
@@ -372,8 +382,19 @@ form input:hover, form textarea:hover, form select:hover{
     border: 1.5px solid #ccc;
 }
 
-form input[type = submit]:hover{
-    opacity: 0.8;
+form #submit:hover{
+    opacity: 0.9;
+    border: 2px solid #000;
+}
+
+#output{
+    margin-top: 20px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 2;
 }
 
 /* @media(max-width: 992px){
@@ -443,4 +464,19 @@ form input[type = submit]:hover{
 
 .socialmedia i:hover{
     opacity: 0.7;
+}
+
+/* Kết thúc phần contact */
+
+#topbtn{
+    position: fixed;
+    bottom: 40px;
+    right: 70px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    background: #c74c3c;
+    color: #fff;
+    cursor: pointer;
+    border: none;
 }

@@ -9,6 +9,8 @@
     <link href="./assets/js/node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/img/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </head>
 <body>
     
@@ -43,7 +45,8 @@
                 <p class="slider-content-description">Với không gian sân vườn thoáng mát , 
                     rộng rãi . Món ăn đa dạng , phong phú , giá cả phù hợp 
                     <br> thích hợp tổ chức tiệc liên hoan , sinh nhật.</p>
-                <a href="#order"><button class="btn">Đặt bàn ngay</button></a>
+                    <button class="btn"><a href="#order">ĐẶT BÀN NGAY</a></button>
+                <!-- <a href="#order"><button class="btn">Đặt bàn ngay</button></a> -->
             </div>
         </div>
         <!-- Kết thúc phần slider -->
@@ -66,7 +69,8 @@
                              tưởng. <br>Ngoài việc thực phẩm đều là hàng chất lượng và tươi sống thì 
                              bên cạnh đó nhà hàng còn có đội ngũ nhân viên chuyên nghiệp và lâu năm với nghề.  
                              Đảm bảo khách hàng yên tâm và hài lòng về chất lượng đồ ăn cũng như chất lượng phục vụ.</p>
-                        <a href="#menu"><button class="btn">Xem thực đơn</button></a>
+                        
+                        <button class="btn"><a href="#menu">XEM THỰC ĐƠN</a></button>
                              
                     </div>
                     <div class="about-item">
@@ -154,7 +158,7 @@
                         
                         <div class = "card-content">
                             
-                            <form method="POST" action="connect.php" >
+                            <form method="POST" action="connect.php" id="form">
 
                                 <div class = "form-row">
 
@@ -188,20 +192,24 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <input type = "submit" value = "ĐẶT BÀN">
+                                    <button type="submit" value="ĐẶT BÀN" id="submit"> ĐẶT BÀN</button>
                                 </div>
-
-                                <p id="output"></p>
+                                
+                                
                                 
                             </form>
+                           
+                            <p id="output"></p>
+                            <script src="./assets/js/main.js"></script>
+                            <script src="./assets/js/submit.js"></script>
                         </div>
                     </div>
                 </section>
+        </div>
                 
 
             
            
-        </div>
                                 
                                 
         <!-- Phần liên hệ -->
@@ -238,11 +246,11 @@
             </div>
         </div>
         <!-- Kết thúc phần liên hệ -->
-            
+        <button id="topbtn"><i class="ti-arrow-up"></i></button>
         
 
     </div>
-
+    <!-- Kết thúc thẻ main -->
     <!-- Scripts -->
     <script src="./assets/js/node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -255,6 +263,25 @@
     }
     flatpickr("input[type=datetime-local]", config);
     
+    </script>
+
+<script>
+    $("#submit").click( function() {
+     
+       $.post( $("#form").attr("action"),
+               $("#form :input").serializeArray(),
+           function(info) {
+     
+             $("#response").empty();
+             $("#response").html(info);
+        
+           });
+     
+      $("#form").submit( function() {
+         return false;  
+      });
+    });
+     
     </script>
 
 
