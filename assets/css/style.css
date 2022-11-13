@@ -10,7 +10,7 @@
 
 /* SETUP */
 :root{
-    --main_color:#191F3A;
+--main_color:#191F3A;
 --yelow:#EAA023;
 --smooth:all .3s ease-in;
 --bg--color:#0C1023;
@@ -31,23 +31,74 @@ ul{
     padding: 80px 0;
 }
 
-.justify_content{
+
+/* Phần đầu */
+
+
+nav{
+    position: fixed;
+    width: 100%;
+    
+    z-index: 1;
+}
+
+nav .menu{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
+.menu ul{
+    display: flex;
+}
 
-/* Phần đầu */
-#header{
+.menu li{
+    margin-left: 7px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 20px;
+    transition: all 0.3s ease;
+}
+
+.menu li:hover a{
+    background-color: var(--yelow);
+    color: #000;
+}
+
+/* #header{
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1;
-    background-color: #000;
+    background-color: transparent;
     height: 80px;
+    text-align: center;
+    justify-content: space-between;
+}
+*/
+#header .logo{
+    width: 100px;
+    height: 100px;
+    padding: 5px 0;
+    
 }
 
-#nav{
+#header img{
+    width: 100%;
+    height: 100%;
+} 
+
+
+
+/* #nav{
     text-align: center;
 }
 #nav ul{
@@ -55,8 +106,9 @@ ul{
 }
 #nav li{
     display: inline-block;
-    
+    float: right;
 }
+
 
 #nav li a{
     color: #fff;
@@ -73,18 +125,18 @@ ul{
 
 
 #header .logo{
-    position: absolute;
+   
     width: 80px;
     float: left;
     padding: 5px ;
     line-height: 80px;
-}
+} */
 
 /* Kết thúc phần đầu */
 
 /* Bắt đầu phần slider */
 #slider {
-    margin-top: 80px;
+    
     min-height: 100vh;
 
     background:
@@ -225,6 +277,7 @@ ul{
 /* Phần menu */
 #menu{
     background-color: var(--bg--color);
+    min-height: 100vh;
 }
 #menu input{
     display: none;
@@ -289,6 +342,7 @@ ul{
 /* Phần order ( đặt bàn ) */
 #order{
     background-color: var(--main_color);
+    min-height: 100vh;
 }
 .banner{
     
@@ -412,6 +466,7 @@ form #submit:hover{
 /* Phần contact */
 #contact{
     background-color: var(--bg--color);
+    min-height: 100vh;
 }
 
 #contact p {
