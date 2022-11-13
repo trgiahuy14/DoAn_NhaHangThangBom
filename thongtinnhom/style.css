@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: url('./fly-17.jpg') center / cover no-repeat;
+    padding: 40px 40px;
+}
+
+#content{
+    padding: 30px 30px;
+    position: relative;
+}
+
+#trgiahuy{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+}
+
+.hainguoi{
+    margin-top: 40vh;
+    width: calc(100%/2);
+    margin-top: 50vh;
+    margin-right: 20px;
+   
+}
+.container{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 30px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+
+.row{
+    display: flex;
+}
+
+.content-row{
+    display: flex;
+}
+
+.about-item{
+    float: left;
+    width: calc(100%/2);
+    padding: 30px 30px;
+}
+.row h1{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.about-item p{
+    color: #fff;
+    line-height: 1.6;
+  
+}
+
+.about-item li{
+    color: #fff;
+    line-height: 1.6;
+}
+
+.about-item img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+
+
+
