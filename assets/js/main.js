@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     $(window).scroll(function(){
-        if($(this).scrollTop() > 40){
+        if($(this).scrollTop() > 70){
             $("#topbtn").fadeIn();
         } else {
             $("#topbtn").fadeOut();

@@ -33,7 +33,7 @@ body{
 }
 .container{
     background: rgba(0, 0, 0, 0.5);
-    padding: 30px 30px;
+    padding: 10px 15px;
     border-radius: 20px;
     border: 1px solid #fff;
 }
@@ -74,6 +74,45 @@ body{
     width: 200px;
     border-radius: 10px;
 }
+
+.about-item button{
+    padding: 5px 5px;
+    border-radius:  5px;
+    margin: 5px;
+}
+
+button a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2;
+    
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    border: 2px solid #fff;
+}
+
+.facebook-btn{
+    background-color: #4267B2;
+    
+}
+
+.instagram-btn{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.github-btn{
+    background-color: #000;
+    width: 70%;
+    border: 1px solid #fff;
+}
+
 
 
 

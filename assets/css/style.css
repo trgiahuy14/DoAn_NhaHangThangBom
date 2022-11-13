@@ -579,3 +579,7 @@ form #submit:hover{
     border: none;
 }
 
+#topbtn:hover{
+    opacity: 0.6;
+}
+
