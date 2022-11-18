@@ -10,7 +10,7 @@
     $people = $_POST['people'];
     $note = $_POST['note'];
 
-    $conn = new mysqli('localhost','root','','testnhahangthangbomtestxampp');
+    $conn = new mysqli('localhost','root','','nhahanthangbom');
     if($conn->connect_error){
       echo "$conn->connect_error";
       die("Connection Failed : ". $conn->connect_error);
@@ -18,10 +18,7 @@
       $stmt = $conn->prepare("insert into datban(chooseDate, hours, name, phoneNumber, email, people, note) values(?, ?, ?, ?, ?, ?, ?)");
       $stmt->bind_param("sssisis", $chooseDate, $hours, $name, $phoneNumber, $email, $people, $note);
       $execval = $stmt->execute();
-  
-     
-     
-      }
-      
-  }
+    }
+
+    }
 ?>

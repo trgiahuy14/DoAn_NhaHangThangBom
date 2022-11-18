@@ -8,14 +8,79 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background: url('./fly-17.jpg') center / cover no-repeat;
-    padding: 40px 40px;
+a{
+    text-decoration: none;
 }
 
+header{
+    background: url(../thongtinnhom/fly-17.jpg) center / cover no-repeat;
+    min-height: 100vh;
+    padding: 30px;
+    
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav .logo{
+    
+}
+
+nav .logo{
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+
+nav li{
+    margin: 0 30px;
+    
+}
+
+nav li a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+}
+
+nav li:hover a{
+    background-color: #fff;
+    color: #000;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.datban{
+    margin-top: 5%;
+}
+
+.datban h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Phần thông tin nhóm */
+
 #content{
-    padding: 30px 30px;
+    padding: 30px;
     position: relative;
+   
 }
 
 #trgiahuy{
@@ -27,7 +92,7 @@ body{
 .hainguoi{
     margin-top: 40vh;
     width: calc(100%/2);
-    margin-top: 50vh;
+    margin-top:  45vh;
     margin-right: 20px;
    
 }
@@ -112,8 +177,3 @@ button:hover{
     width: 70%;
     border: 1px solid #fff;
 }
-
-
-
-
-
