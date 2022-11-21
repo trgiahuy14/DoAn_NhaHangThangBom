@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./quanlydatban/style.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>
         <nav id ="navbar">
-            <a class="logo" href="/">Nhà hàng Thằng Bờm Manager & Dev team</a>
+            <a class="logo" href="./index.php">Nhà hàng Thằng Bờm Manager & Dev team</a>
             <div class="nav-menu">
                 <ul>
-                    <li><a href="">Danh sách đặt bàn</a></li>
-                    <li><a href="./thongtinnhom/thongtin.html">Thông tin nhóm</a></li>
+                    <li class="active"><a href="../index.php"><i class="ti-bar-chart">Danh sách đặt bàn</a></li>
+                    <li><a href="./thongtin.html"><i class="ti-list">Thông tin nhóm</a></li>
+                    <li><a href="./index.html"><i class="ti-back-left">Quay lại WEB nhà hàng</a></li>
                 </ul>
             </div>
         </nav>

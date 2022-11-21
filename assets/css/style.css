@@ -11,11 +11,13 @@
 /* SETUP */
 :root{
 --main_color:#191F3A;
+
 --yelow:#EAA023;
 --smooth:all .3s ease-in;
---bg--color:#0C1023;
+/* --bg--color:#0C1023; */
+/* --bg--color:#151c3e; */
+--bg--color:#10152e;
 --main-font:'Dancing Script';
---maugo: #c27216;
 }
 
 
@@ -28,7 +30,7 @@ ul{
 }
 
 .section_padding{
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 
@@ -216,9 +218,11 @@ nav .menu{
    
 }
 .container{
-    margin: auto;
+    
+    margin: auto ;
     max-width: 1200px;
     padding: 54px 32px ;
+   
 }
 
 .row{
@@ -231,7 +235,7 @@ nav .menu{
 .about-item img{
     width: 100%;
     border-radius: 10px;
-    height: 400px;
+    min-height: 100%;
     
 }
 .about-item{
@@ -279,6 +283,7 @@ nav .menu{
 /* Phần menu */
 #menu{
     background-color: var(--bg--color);
+    /* background: url('../img/menu/background.jpg') center / cover no-repeat; */
     min-height: 100vh;
 }
 #menu input{
@@ -302,8 +307,9 @@ nav .menu{
     text-decoration: none;
     color: black;
     margin: 30px 10px;
+    
    text-transform: capitalize;
-   font-weight: 550;
+   font-weight: bold;
 }
 
 #menu .images img{
@@ -321,7 +327,7 @@ nav .menu{
 
 #menu label:hover{
     opacity: 0.8;
-    
+    background-color: var(--yelow);
 }
 
  #menuDacbiet:checked ~ .images > a > img:not([class*='menuDacbiet']),
@@ -349,6 +355,7 @@ nav .menu{
 /* Phần order ( đặt bàn ) */
 #order{
     background-color: var(--main_color);
+    
     min-height: 100vh;
 }
 .banner{
