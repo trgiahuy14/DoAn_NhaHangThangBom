@@ -43,6 +43,8 @@
                         <th>Email</th>
                         <th>Số lượng khách</th>
                         <th>Ghi chú</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
                         
                     </tr>
                 </thead>
@@ -52,7 +54,7 @@
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
-                    $database = "nhahanthangbom";
+                    $database = "nhahangthangbom";
 
                     $connection = new mysqli($servername, $username, $password,$database);
 
@@ -67,11 +69,17 @@
                         <td>". $row["chooseDate"] ."</td>
                         <td>". $row["hours"] ."</td>
                         <td>". $row["name"] ."</td>
-                        <td>". $row["phonenumber"] ."</td>
+                        <td>". $row["phoneNumber"] ."</td>
                         <td>". $row["email"] ."</td>
                         <td>". $row["people"] ."</td>
                         <td>". $row["note"] ."</td>
-                        
+                        <td>      </td>
+                        <td> 
+                        <a class='btn btn-success btn-sm' href='./update.php'>Xác nhận</a>
+                        <a class='btn btn-danger btn-sm' href='./delete.php?id=$row[id]'>Delete </a> 
+                       
+                    </td>
+                    
                         
                     </tr>";
                     }

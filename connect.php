@@ -10,7 +10,7 @@
     $people = $_POST['people'];
     $note = $_POST['note'];
 
-    $conn = new mysqli('localhost','root','','nhahanthangbom');
+    $conn = new mysqli('localhost','root','','nhahangthangbom');
     if($conn->connect_error){
       echo "$conn->connect_error";
       die("Connection Failed : ". $conn->connect_error);
