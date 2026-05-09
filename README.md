@@ -2,17 +2,13 @@
 
 ## Môn: Lập trình ứng dụng web
 
-## Đề tài: **Website giới thiệu nhà hàng Thằng Bờm (2022)**
-
-> Đây là phiên bản cũ (2022).  
-> Phiên bản ver2 thay đổi giao diện, code sạch hơn:  
-> 👉 https://github.com/trgiahuy14/restaurant-html-v2.git
+### Đề tài: **Website giới thiệu nhà hàng Thằng Bờm (2022)**
 
 ---
 
 ## 🔗 Demo:
 
-👉 https://trgiahuy14.github.io/restaurant-html/
+👉 https://huydev14.github.io/restaurant-html/
 
 ---
 
